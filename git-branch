@@ -4,6 +4,9 @@ git branch <new-branch>
 git branch -d <branch>
 强制删除分支
 git branch -D <branch>
+查看远程/本地分支
+git branch -r
+git branch -v
 
 切换到现有的分支
 git checkout <exist-branch>
@@ -15,3 +18,10 @@ git checkout -b <new-branch> <exist-branch>
 ！！！ git checkout <commit的hash码或者tag>, 这时候会提醒我们进入了detached HEAD,永远记得在开发分支上开发，不要在分离的HEAD上开发 ！！！
 
 git merge 会产生合并提交
+
+本地分支推送到远程
+git push origin <local-branch>:<remote-branch>
+
+拉取远程分支到本地,本地没有分支会创建
+git fetch origin <remote-branch>:<local-branch> 拉取不切分支
+git checkout -b <local-branch> <origin/remote-branch> 拉取并切分支
