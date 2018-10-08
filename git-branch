@@ -1,0 +1,17 @@
+新建分支
+git branch <new-branch>
+删除分支
+git branch -d <branch>
+强制删除分支
+git branch -D <branch>
+
+切换到现有的分支
+git checkout <exist-branch>
+创建新分支并切换
+git checkout -b <new-branch>
+基于现有的分支创建新的分支
+git checkout -b <new-branch> <exist-branch>
+
+！！！ git checkout <commit的hash码或者tag>, 这时候会提醒我们进入了detached HEAD,永远记得在开发分支上开发，不要在分离的HEAD上开发 ！！！
+
+git merge 会产生合并提交
