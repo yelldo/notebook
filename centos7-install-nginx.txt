@@ -1,0 +1,9 @@
+本教程编译安装nginx
+
+要保证服务器安装有gcc compiler
+检查是否安装：
+yum list installed | grep gcc
+如果没有安装如下：
+yum install gcc
+
+
