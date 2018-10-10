@@ -1,0 +1,34 @@
+http请求跨域常见的字眼：
+Access-Control-Allow-Origin
+
+ajax代码示例：
+<script>
+      $(document).ready(function(){
+          console.log("document init ...");
+          $.ajax({
+              url: "http://192.168.20.31:9645/dws/uas/index/medicine_code_lib",
+              type: "POST",
+
+              beforeSend:function(){
+                  console.log("请求前的处理");
+              },
+              success:function(data){
+                  console.log("请求成功时处理");
+                  console.log(data);
+              },
+              complete:function(){
+                  console.log("请求完成的处理");
+              },
+              error:function(req,code,error){
+                  console.log("请求出错处理 " + "code:" + code + " error:" + error);
+              }
+          });
+      });
+</script>
+
+chrome浏览器启动图标配置： 在目标路径中加入如下参数
+"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir=C:\MyChromeDevUserData
+
+其他的解决方案概述：
+1. 本地启动nginx做层代理
+2. ajax请求和服务端同时作处理
