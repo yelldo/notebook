@@ -1,0 +1,376 @@
+爬虫必备
+1.自动登录接口，提高爬虫权限
+2.http and https 都支持
+
+文档： gitbook的使用
+
+爬虫准备抓取的网站：
+http://www.zcool.com.cn/ 站酷（图片）
+
+
+WebMagic爬取网站图片！
+https://my.oschina.net/flashsword/blog/147334  使用Selenium来抓取动态加载的页面
+
+Selenium的Java模块 chrome
+
+https://www.testwo.com/blog/6931  selenium之操作ChromeDriver
+
+
+github search :  selenium webdriver
+
+webmagic 文档页面 http://webmagic.io/docs/zh/posts/chx-cases/js-render-page.html
+
+用 Pg + PostgREST 直接生成后端 API 是非常快速高效的办法 !!!
+
+可以在stackoverflow搜索某个话题的讨论 ！！
+When to use MongoDB or other document oriented database systems?http://stackoverflow.com/questions/1476295/when-to-use-mongodb-or-other-document-oriented-database-systems
+
+============= linux上部署web项目 ================================
+# maven打包
+mvn clean package -Dmaven.test.skip=true
+打包生成的.war文件放到tomcat下的webapp目录下
+
+# war包路径
+/usr/local/git_project/mall-demo/target  mall.war
+
+# tomcat bin文件路径
+/usr/local/soft_coding/apache-tomcat-8.5.23/bin   startup.sh  shutdown.sh
+=================================================================
+
+1 抓网页
+2 MySQL持久数据
+3 读取.json文件，获取数据再持久化（抓网页的时候，数据可以存在mongo或者redis中，
+然后后台再通过调度来把这部分数据持久化到mysql中，
+这样可以提高网页的抓取效率，抓取归抓取，数据存储归数据存储）
+4 selenium模拟登陆
+
+爬虫存在的疑惑：
+1 如何增量抓取，第一次抓取到某个位置的时候停止，下次启动的话，抓取记录怎么掌控，如何去重比较好
+2 异步消息队列
+3 之前有朋友说过如何知道爬虫开始和结束的问题，例如：#545 #563
+之前的做法是用Listener做监听，在各个环节做调用，这种方式扩展性较差，更好的方式是发送、订阅事件来实现。这也是其他框架的常用做法。
+
+现在的问题是，有没有已有的比较轻量的异步消息实现，类似Guava的EventBus(不太想用Guava，因为不同版本的兼容性比较成问题)。如果有必要的话，也可以自己写一个。
+
+/*********************腾讯招聘***********************/
+如果你算法有研究或者对大数据开发有信心~~投过来！
+地点：深圳 
+岗位要求：
+本科及以上学历，计算机、统计、数学等相关专业，五年及以上工作经验；
+三年以上大规模数据分析、建模、挖掘相关工作经验；
+熟悉常用的回归、分类、聚类、图模型、文本挖掘等机器学习算法，有丰富的算法应用经验；
+熟悉Python/scala等语言，能独立完成相关的数据分析工作；
+熟悉Linux开发环境，具有Hive/Spark/等大数据分析工具相关使用经验者优先；
+有storm/spark streaming等实时计算经验者优先；
+有推荐系统相关领域工作者优先；
+有深度学习经验者优先；
+具备良好的沟通交流能力和文字语言表达能力，较好的逻辑分析能力。
+
+岗位职责：
+基于机器学习、深度学习的个性化实时推荐；
+负责腾讯游戏用户的数据分析工作；
+基础经分指标体系建设；
+基于CRM的用户生命周期精准干预；
+自动化营销活动价值评估系统；
+数值策划；
+to:30213397 or  30213397@qq.com
+欢迎自荐或推荐身边朋友！
+/***********************结束************************/   
+
+============== 2017.12.11 spring framework 中各个module的作用 ==================
+github上的地址：
+https://github.com/spring-projects/spring-framework
+Spring Framework Documentation 框架文档
+https://docs.spring.io/spring/docs/current/spring-framework-reference/
+架构说明：
+https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Artifacts
+spring part of docs _ resources(filepath e.g.)
+https://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/resources.html#resources-app-ctx
+
+=====================================================================
+http://localhost:8828/sync/byTable?database=sm_report_test&table=t_delivery_or_back_detail_bak2&stepSize=3000&jobNum=4&from=1&to=80000
+luzy@nfky.com
+/opt/ela/logs/NFKY.log
+'P."%L8Ra8~g8"oc
+'P."%L8Ra8~g8"oc
+
+http://172.18.30.31:9200/_cluster/health?pretty	
+
+钉钉机器人：
+https://oapi.dingtalk.com/robot/send?access_token=442b5d06abc221d75a410a9ddbe8db5472651a39c6bb7ef7e032e4f9ea10a654
+
+13:50:54
+13:59:09
+
+
+存储帐号的文件：/etc/passwd
+存储密码的文件：/etc/shadow
+cat、more、head、tail以及vim等命令查看或者修改
+cat /etc/shadow | grep "admin"  
+
+
+sudo chown -R elkruner elasticsearch  授予某用户某目录权限
+
+查看端口占用情况，pid在倒二列
+ netstat -anlp | grep 3306
+ netstat -anp | grep 5601 
+ netstat -tunlp|grep 端口号，用于查看指定端口号的进程情况 
+ 
+ bin/elasticsearch-plugin install file:///path/to/file/x-pack-6.1.1.zip
+ 
+ 172.18.30.61:9300
+ 
+ ps -ef | grep <pid> 
+ ps aux | grep elastic 按名称查找进程
+ kill -9 <pid>    更具pid终结进程
+ 
+ useradd <username> 添加用户（默认创建一个和用户名相同的用户组）
+ useradd -g <group> <username> 添加用户到组下面
+ 
+ =====
+ 查看linux系统版本，适用于Redhat系：
+ cat /etc/redhat-release
+ 
+ =======================================
+ 留下的问题：
+1.java模拟https请求
+
+INSERT INTO `trd_report`(`created_by_id`, `created_time`, `updated_by_id`, `updated_time`, `dataDimension`, `name`, `orgType`, `serviceMethod`, `templateName`, `type`) VALUES (0, now(), 0, null, 1, '医保定点公立医疗机构药品货款统一结算汇总表', 4, 'getOrderWarn', 'order-warning.ftl', 1);
+
+
+-- 供应企业汇总单
+SELECT * from t_batch_settlement_record where settlementCenterId = 8485 and summaryId = 346;
+
+-- 对账单
+-- 4595 	S180122545867	4063.5	4063.5
+SELECT created_time,id,settlementNo,accountAmount,confirmedAmount from t_settlement where
+  id in (SELECT settlement_id from t_delivery_or_back_detail where distribute_settlements_summary_id
+  = 346);
+  
+厦门医保发来的4条对账单支付情况说明：
+1.同一批的5个对账单（S180122545855,S180122545867,S180122545871,S180122545862,S180122545877）生成了一个汇总单 总金额=12419.71
+2.excel表格中只体现了其中4个对账单，不完全支付
+3.未支付的对账单： S180122545867
+
+==================
+
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/applicationContext.xml" })
+
+E:\useful-projects\mall\mall_end\src\main\webapp\WEB-INF\dispatcher-servlet.xml
+
+transactionManager
+
+https://stackoverflow.com/questions/2604875/spring-contextconfiguration-fail-to-load-config-file-in-src-test-resources
+
+{status: 0,msg: "putOne started ..."}
+settlementNo
+
+======================
+http://172.18.30.31:15672 rabbitmq
+http://172.18.30.31:9200  es
+http://172.18.30.31:5601  kibana
+
+
+logstash -f ../config/pptradedetail/pptradedetail0.conf --path.data=../data_pptradedetail0
+logstash -f ../config/pptradedetail/pptradedetail1.conf --path.data=../data_pptradedetail1
+logstash -f ../config/pptradedetail/pptradedetail2.conf --path.data=../data_pptradedetail2
+logstash -f ../config/pptradedetail/pptradedetail3.conf --path.data=../data_pptradedetail3
+
+======================= elasticsearch ======================
+es index/type 的备份 ？？？
+
+es索引单分片的搜索和插入性能与多分片的比较 ？？？
+	多分片的索引存在group by 数据不精确的问题
+======= fieldmeta or multi-field keyword(supported sorting and aggregation)===============
+{
+      "properties": {
+        "city": {
+          "type": "text",
+          "fields": {
+            "raw": { 
+              "type":  "keyword"
+            }
+          }
+        }
+      }
+    }
+====================== 
+centos查看磁盘空间大小
+简单命令 df -h
+=============
+查看系统可用内存
+free -g    (-g 表示以GB为单位显示，-m 以MB为单位显示)
+=============
+chrome restClient 
+Request URL 
+	http://106.14.182.71:9200/_sql/_explain?sql=select drugFactoryId,deliveryFactoryId,count(1) from p_ptrade_detail_1.0.1 group by drugFactoryId.keyword,deliveryFactoryId.keyword order by count(1) desc limit 2147483647
+将 	SQL convert2 DSL
+=============
+
+
+省几个对账单反映说没有支付
+S180133811210
+S180125717950
+S180121597252
+可能是省里实际上就没有支付这些货款，福建武警医院
+
+/opt/canal-1.0.25/bin/startup.sh
+/usr/local/mysql/log-bin
+
+
+# configure for cananl -luzy
+log-bin=./log-bin/mysql-bin
+binlog-do-db=estest
+binlog-format=ROW
+server_id=1
+
+# 登录密码的加密规则
+DigestUtils.md5Hex(user.getUserAccount() + pwd.trim());
+
+5a34a3a05e7e0c4d0efe5c8b0e9fc6a9
+
+
+List<Object[]> result = readem.find(//
+                "select sum(accountAmount),summaryId from SettlePayment where disSummaryId = ? group by summaryId"//
+                ,false,disSummaryId);
+        for (Object[] o : result) {
+            SettlePaymentSummary sps = readem.get(SettlePaymentSummary.class, o[1]);
+            sps.setSettledAmount(sps.getSettledAmount() + (Double) o[0]);
+            em.merge(sps);
+        }
+		
+古田县城东街道社区卫生服务中心
+=================
+pre logstash 2 es   pptradedetail_nulldata.conf 466346  spend 10min
+pre 上使用logstash往es导入数据，分页50000，3个实例，发生阻塞，改成25000
+es 数据路由存储在指定的shard中
+
+==================
+
+-- 配送汇总结算单修改字段名称
+alter table t_distribute_summary_settle drop settlementCenterId;
+ALTER TABLE t_distribute_summary_settle ADD optOrgId bigint(20) NOT NULL DEFAULT -1 COMMENT '操作生成机构';
+-- 付款单添加字段 disSummaryId 配送结算汇总单id
+ALTER TABLE t_settle_payment ADD disSummaryId bigint(20) COMMENT '配送结算汇总单id';
+
+==================
+http://106.14.182.71:9200/
+
+http://172.18.30.31:9200/
+
+172.17.0.1
+
+select * from p_ptrade_detail_1.0.0
+
+entities , indices
+
+# entities,项目中model实体
+# indices,entities在es中对应的索引名
+# entitys和indices位置需要对应上，多个以','英文逗号隔开，这里不写model的全路径，有需要再修改
+
+Hx@Xmb180418plic!210418
+
+-- 将sql转换成es query
+http://106.14.182.71:9200/_sql/_explain?sql=SELECT COUNT(id) FROM t_settlement GROUP BY range(id, 20,25,30,35,40)
+
+
+"fields": {
+				"keyword": {
+					"type": "keyword"
+				}
+			}
+			
+{
+  "properties": {
+    "col1":{
+      "type": "text",
+      "copy_to": "full_col1"
+      
+    },
+    "col2":{
+      "type": "text",
+      "copy_to": "full_col1"
+      
+    },
+    "full_col1":{
+      "type": "text",
+      "fields": {
+				"keyword": {
+					"type": "keyword"
+				}
+			}
+    }
+  }
+}
+
+
+
+http://101.200.45.46:9200/
+http://106.14.182.71:9200
+
+drwx------   6 ela      ela  4.0K May  8 11:34 ela
+
+echo 'start pptradedetail jobs...'
+nohup ../bin/logstash -f pptradedetail0.conf --path.data=../data_multi/pptradedetail0 > pptradedetail_output0 2>&1 &
+sleep 5
+nohup ../bin/logstash -f pptradedetail1.conf --path.data=../data_multi/pptradedetail1 > pptradedetail_output1 2>&1 &
+sleep 5
+nohup ../bin/logstash -f pptradedetail2.conf --path.data=../data_multi/pptradedetail2 > pptradedetail_output2 2>&1 &
+echo 'pptradedetail jobs started!'
+
+/home/ela/logstash622/lib/mysqldriver/mysql-connector-java-5.1.45-bin.jar
+ 
+http://106.14.182.71:9200
+ 
+data-prod-es-deleted
+
+==================
+// 为什么使用springmvc的方式，报错406 not acceptable,而使用如下方式可以（自己控制数据流的数据）
+    @RequestMapping("/getAreaListData2")
+    @ResponseBody
+    @Deprecated
+    public JSONObject getAreaListData2() {
+        HomeDataService homeDataService = this.getProxy(HomeDataService.class);
+        //JSONObject result = homeDataService.areaStatistics(getCurrentProject());
+        JSONObject result = homeDataService.areaStatistics("trd");
+        return result;
+    }
+	
+	
+	
+	@RequestMapping("/luzydemo")
+    public void demo(HttpServletRequest request, HttpServletResponse response) {
+        JSONObject json = new JSONObject();
+        JSONArray arr = new JSONArray();
+        for (int i = 1; i < 4; i++) {
+            JSONObject j = new JSONObject();
+            JSONArray a = new JSONArray();
+            for(int q = 1; q<5;q++) {
+                a.add(q*100);
+            }
+            j.put("area", "h"+i);
+            j.put("val", a);
+            arr.add(j);
+        }
+        json.put("demo", arr);
+        try {
+            response.setCharacterEncoding("utf-8");
+            response.getWriter().write(JSONObject.toJSONString(json));
+        }catch (Exception e){
+            log.error("输出错误："+e.getMessage());
+        }
+    }
+
+    @RequestMapping("/luzydemo2")
+    @ResponseBody
+    public JSONObject demo2() {
+        JSONObject json = new JSONObject();
+        JSONArray arr = new JSONArray();
+        for (int i = 0; i < 3; i++) {
+            JSONObject j = new JSONObject();
+            j.put(i + "", "h" + 1);
+            arr.add(j);
+        }
+        json.put("demo2", arr);
+        return json;
+    }
