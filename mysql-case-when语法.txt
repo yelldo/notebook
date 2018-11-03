@@ -1,0 +1,12 @@
+更多详情，查看如下链接：
+https://www.cnblogs.com/clphp/p/6256207.html
+
+case column_name 
+	when value1 then value1_
+	when value2 then value2_
+	else value3
+end
+
+case when column = value_ then ...
+
+以上两种写法可以嵌套

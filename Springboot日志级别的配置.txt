@@ -1,0 +1,22 @@
+
+SpringBoot debug的使用：
+
+logging:
+  level: 
+    root: info
+    com.dws: debug
+    com.xmhx.dws: debug
+    com.atomikos: error
+	
+如果框架依赖的类抛出的错误，或者被catch了，可以通过这个来显示类中的debug信息
+
+logging:
+  level: 
+    root: info
+    com.dws: debug
+    com.xmhx.dws: debug
+    com.atomikos: error
+	org.eclipse.jetty.httpChanel: debug
+	
+	
+	===
